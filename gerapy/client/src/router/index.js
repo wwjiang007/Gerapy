@@ -21,6 +21,10 @@ import projectIndexComponent from 'pages/project/index'
 import projectEditComponent from 'pages/project/edit'
 import projectConfigureComponent from 'pages/project/configure'
 import projectDeployComponent from 'pages/project/deploy'
+// task
+import taskIndexComponent from 'pages/task/index'
+import taskCreateComponent from 'pages/task/create'
+import taskEditComponent from 'pages/task/edit'
 
 
 Vue.use(VueRouter)
@@ -106,6 +110,30 @@ const routes = [{
     component: projectDeployComponent,
     meta: {
       title: "项目部署",
+      auth: true
+    }
+  }, {
+    path: '/task',
+    name: 'taskIndex',
+    component: taskIndexComponent,
+    meta: {
+      title: "任务管理",
+      auth: false
+    }
+  }, {
+    path: '/task/create',
+    name: 'taskCreate',
+    component: taskCreateComponent,
+    meta: {
+      title: "任务添加",
+      auth: false
+    }
+  }, {
+    path: '/task/:id/edit',
+    name: 'taskEdit',
+    component: taskEditComponent,
+    meta: {
+      title: "任务编辑",
       auth: true
     }
   }]
