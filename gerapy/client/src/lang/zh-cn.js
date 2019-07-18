@@ -55,7 +55,9 @@ export default {
     addAttr: '添加属性',
     addExtractor: '添加解析器',
     addTable: '添加表映射',
-    addCollection: '添加集合映射'
+    addCollection: '添加集合映射',
+    status: '状态',
+    nextTime: '下次执行'
   },
   titles: {
     createClient: '创建主机',
@@ -80,7 +82,10 @@ export default {
     browser: '浏览器',
     error: '错误',
     proxy: '代理',
-    cookies: 'Cookies'
+    cookies: 'Cookies',
+    createTask: '创建任务',
+    editTask: '编辑任务',
+
   },
   menus: {
     clients: '主机管理',
@@ -130,7 +135,9 @@ export default {
     errorClients: '主机连接失败',
     countProjects: '项目',
     notGenerated: '未生成',
-    chooseDateTime: '选择日期时间'
+    chooseDateTime: '选择日期时间',
+    executedJobs: '任务执行成功',
+    errorJobs: '任务执行失败',
   },
   columns: {
     id: 'ID',
@@ -205,7 +212,8 @@ export default {
     uri: '连接串',
     proxyPool: '代理池',
     cookiesPool: 'Cookies池',
-    failTimes: '失败次数'
+    failTimes: '失败次数',
+    timezone: '时区'
   },
 
 }

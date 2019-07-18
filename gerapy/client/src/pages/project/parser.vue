@@ -37,7 +37,7 @@
           :title="$lang[$store.state.lang].titles.error"
           type="error"
           :closable="false">
-          <template scope="description">
+          <template slot-scope="description">
             <pre>
               {{ error }}
             </pre>
@@ -186,7 +186,7 @@
               this.activeResponseHtml = response.html
             }
           }
-          if (data.status === '2') {
+          if (data.status === '0') {
             this.fetching = false
             this.error = data.message
           }

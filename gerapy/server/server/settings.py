@@ -129,3 +129,7 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'core/templates/static'),
 )
+
+PROJECTS_FOLDER = 'projects'
+
+SCHEDULER_HEARTBEAT = 5

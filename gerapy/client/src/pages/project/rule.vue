@@ -12,8 +12,11 @@
           <!-- 列表类型，如 allow, deny -->
           <div v-if="value instanceof Array">
             <div v-for="(arrayValue, arrayKey, arrayIndex) in value" :key="arrayKey">
-              <el-input
+              <el-input v-if="isNaN(rule[key][arrayKey])"
                 v-model="rule[key][arrayKey]" class="inline"
+                size="small"></el-input>
+              <el-input v-else
+                v-model.number="rule[key][arrayKey]" class="inline"
                 size="small"></el-input>
               <el-button type="danger" size="mini"
                          @click="onDeleteInput(rule, key, arrayKey)">
@@ -24,7 +27,7 @@
           </div>
           <!-- 列表类型 -->
           <!-- 字符串类型，如 callback, process_request -->
-          <div v-if="typeof value == 'string'">
+          <div v-if="typeof value === 'string'">
             <el-input
               v-model="rule[key]" class="inline"
               size="small"></el-input>
@@ -36,7 +39,7 @@
           </div>
           <!-- 字符串类型 -->
           <!-- 布尔类型，如 follow -->
-          <div v-if="typeof value == 'boolean'">
+          <div v-if="typeof value === 'boolean'">
             <span class="inline">
               <el-radio class="radio" v-model="rule[key]" :label="true">True
               </el-radio>
